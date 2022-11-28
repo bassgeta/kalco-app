@@ -19,6 +19,25 @@
     ]
   },
   {
+    "bar": "Lepa Zoga",
+    "linkDoSlike": "",
+    "ocena": 4,
+    "dzabe": {
+      "je": false,
+      "confirmed": true
+    },
+    "obstoj": "zihr",
+    "mapsLink": "https://g.page/LepaZoga?share",
+    "lat": 46.0613287,
+    "lng": 14.4960384,
+    "notes": [
+      {
+        "naslou": "Propr kalco, ma je za placat",
+        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol."
+      }
+    ]
+  },
+  {
     "bar": "Shark bar",
     "linkDoSlike": "",
     "ocena": 0,
