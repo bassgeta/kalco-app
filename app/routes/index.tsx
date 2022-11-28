@@ -1,31 +1,17 @@
+import { getKalcoti } from '../helpers/kalco/parseKalcoti';
+
 export default function Index() {
+  const kalcoti = getKalcoti();
+
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
+      <h1>Kalcoti!</h1>
       <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
+        {kalcoti.map((kalco) => (
+          <li key={kalco.bar}>
+            {kalco.bar} - {kalco.obstoj}, {kalco.ocena}
+          </li>
+        ))}
       </ul>
     </div>
   );
