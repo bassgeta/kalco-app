@@ -15,7 +15,9 @@ export default function Index() {
       <ul>
         {kalcoti.map((kalco) => (
           <li key={kalco.bar}>
-            {kalco.bar} - {kalco.obstoj}, {kalco.ocena}
+            <p>
+              {kalco.bar} - {kalco.obstoj}, {kalco.ocena}
+            </p>
           </li>
         ))}
       </ul>

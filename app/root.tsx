@@ -21,7 +21,7 @@ export const links: LinksFunction = () => {
     { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Butcherman&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Butcherman&family=Press+Start+2P&display=swap',
     },
   ];
 };
