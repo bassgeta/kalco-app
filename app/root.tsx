@@ -14,9 +14,16 @@ export const meta: MetaFunction = () => ({
   title: 'Kalcoti',
   viewport: 'width=device-width,initial-scale=1',
 });
-
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: styles }];
+  return [
+    { rel: 'stylesheet', href: styles },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Butcherman&display=swap',
+    },
+  ];
 };
 
 export default function App() {

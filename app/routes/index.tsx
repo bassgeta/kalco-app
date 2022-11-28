@@ -10,8 +10,8 @@ export default function Index() {
   const kalcoti = useLoaderData<KalcoEntry[]>();
 
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
-      <h1>Kalcoti!</h1>
+    <div>
+      <h1>Kalčoti!</h1>
       <ul>
         {kalcoti.map((kalco) => (
           <li key={kalco.bar}>
