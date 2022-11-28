@@ -1,7 +1,13 @@
+import { useLoaderData } from '@remix-run/react';
+import type { KalcoEntry } from '~/interfaces/kalco';
 import { getKalcoti } from '../helpers/kalco/parseKalcoti';
 
+export function loader() {
+  return getKalcoti();
+}
+
 export default function Index() {
-  const kalcoti = getKalcoti();
+  const kalcoti = useLoaderData<KalcoEntry[]>();
 
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>

@@ -11,7 +11,7 @@ import styles from './styles/global.css';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'New Remix App',
+  title: 'Kalcoti',
   viewport: 'width=device-width,initial-scale=1',
 });
 
