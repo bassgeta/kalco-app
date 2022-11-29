@@ -1,0 +1,28 @@
+.recenzije-okvir {
+  background-color: var(--color-background);
+  padding: var(--space-sm);
+}
+
+.glavni-naslov {
+  margin-bot: var(--space-md);
+}
+
+.recenzije {
+  max-height: 40vh;
+  overflow-y: auto;
+  margin-left: var(--space-xs);
+}
+
+.ocena {
+  color: var(--color-primary);
+}
+
+.recenzija {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px dotted var(--color-tertiary);
+  border-left: 2px dotted var(--color-secondary);
+
+  padding: var(--space-xxs);
+  margin-bottom: var(--space-xs);
+}
