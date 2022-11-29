@@ -17,21 +17,26 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 body {
+  margin: 2%;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-text-primary);
-  font-family: 'Merienda', sans-serif;
+  font-family: "Merienda", sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Nerko One', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Nerko One", sans-serif;
   color: var(--color-text-secondary);
   margin: 0;
 }
