@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -6,17 +6,17 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from '@remix-run/react';
-import globalStyles from './styles/global.css';
+} from "@remix-run/react";
+import globalStyles from "./styles/global.css";
 
 export const meta: MetaFunction = () => ({
-  charset: 'utf-8',
-  title: 'Kalcoti',
-  viewport: 'width=device-width,initial-scale=1',
+  charset: "utf-8",
+  title: "Kalcoti",
+  viewport: "width=device-width,initial-scale=1",
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: globalStyles }];
+  return [{ rel: "stylesheet", href: globalStyles }];
 };
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Merienda:wght@300;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Nerko+One&family=Merienda:wght@300;900&display=swap"
           rel="stylesheet"
         />
         <Meta />

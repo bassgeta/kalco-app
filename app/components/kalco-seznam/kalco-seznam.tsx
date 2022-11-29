@@ -1,14 +1,14 @@
-import type { FC } from 'react';
-import { useState } from 'react';
-import type { Kalco } from '~/interfaces/kalco';
+import type { FC } from "react";
+import { useState } from "react";
+import type { Kalco } from "~/interfaces/kalco";
 import {
-  KalcoVelik,
-  links as kalcoVelikLinks,
-} from '../kalco-velik/kalco-velik';
-import styles from './kalzo-seznam.css';
+  SpustniMeni,
+  spustniMeniLinks,
+} from "../../stories/spustni-meni/spustni-meni.stories";
+import styles from "./kalzo-seznam.css";
 
 export function links() {
-  return [...kalcoVelikLinks(), { rel: 'stylesheet', href: styles }];
+  return [...spustniMeniLinks(), { rel: "stylesheet", href: styles }];
 }
 
 interface KalcoSeznamLastnosti {
@@ -20,16 +20,16 @@ export const KalcoSeznam: FC<KalcoSeznamLastnosti> = ({ kalcoti }) => {
 
   return (
     <>
-      <div className={`kalcoSeznam ${!jePokazan ? 'kalcoSeznam-closed' : ''}`}>
+      <div className={`kalcoSeznam ${!jePokazan ? "kalcoSeznam-closed" : ""}`}>
         <button className="close-button" onClick={() => setJePokazan(false)}>
           X
         </button>
         {kalcoti.map((kalco) => (
-          <KalcoVelik key={kalco.id} kalco={kalco} />
+          <SpustniMeni key={kalco.bar} kalco={kalco} />
         ))}
       </div>
       <button
-        className={`open-button ${jePokazan ? 'open-button-hidden' : ''}`}
+        className={`open-button ${jePokazan ? "open-button-hidden" : ""}`}
         onClick={() => setJePokazan(true)}
       >
         O
