@@ -6,7 +6,7 @@
   --color-martinique-light: #423851;
   --color-martinique-dark: #2f304a;
   --color-red-beech: #882400;
-  --color-cedar-woord: #782102;
+  --color-cedar-wood: #782102;
   --color-text-primary: var(--color-yellow-sea);
   --color-text-secondary: var(--color-japanese-laurel);
   --color-background-primary: var(--color-martinique-dark);
@@ -24,14 +24,14 @@ html, body, #root {
 }
 
 body {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
   color: var(--color-text-primary);
-  background-color: var(--color-background-primary);
+  font-family: 'Merienda', sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: 'Butcherman', sans-serif;
+  font-family: 'Nerko One', sans-serif;
   color: var(--color-text-secondary);
   margin: 0;
 }
@@ -49,12 +49,18 @@ h3 {
 }
 
 p {
-  font-family: 'Press Start 2P', sans-serif;
   margin: 0;
   font-size: 1.5rem;
 }
 
 a {
-  color: var(--special-link);
+  color: var(--color-green-leaf);
   text-decoration: underline;
+}
+
+button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
 }

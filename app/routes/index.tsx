@@ -1,26 +1,27 @@
+import type { LinksFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
-import type { KalcoEntry } from '~/interfaces/kalco';
-import { getKalcoti } from '../helpers/kalco/parseKalcoti';
+import {
+  KalcoSeznam,
+  links as kalcoSeznamLinks,
+} from '~/components/kalco-seznam/kalco-seznam';
+import type { Kalco } from '~/interfaces/kalco';
+import { dwabiKalcote } from '../helpers/kalco/parseKalcoti';
 
 export function loader() {
-  return getKalcoti();
+  return dwabiKalcote();
 }
 
+export const links: LinksFunction = () => {
+  return [...kalcoSeznamLinks()];
+};
+
 export default function Index() {
-  const kalcoti = useLoaderData<KalcoEntry[]>();
+  const kalcoti = useLoaderData<Kalco[]>();
 
   return (
     <div>
       <h1>Kalčoti!</h1>
-      <ul>
-        {kalcoti.map((kalco) => (
-          <li key={kalco.bar}>
-            <p>
-              {kalco.bar} - , {kalco.ocena}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <KalcoSeznam kalcoti={kalcoti} />
     </div>
   );
 }

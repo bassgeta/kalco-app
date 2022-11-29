@@ -1,0 +1,13 @@
+.kalcoSeznam {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  padding: 1rem;
+  background-color: teal;
+}
+
+.kalcoSeznam > * {
+  margin-bottom: 1rem;
+}

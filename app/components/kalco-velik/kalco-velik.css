@@ -1,0 +1,111 @@
+.kalcoContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.kalcoGumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: var(--color-background-primary);
+  border-bottom: 2px dotted var(--color-border-primary);
+
+  padding: 1rem;
+}
+
+.ime {
+  color: var(--color-yellow-sea);
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: 'Nerko One';
+}
+
+.ocena {
+  color: var(--color-yellow-sea);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.pjt {
+  color: var(--color-casablanca);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.puscica {
+  color: var(--color-japanese-laurel);
+  margin-left: auto;
+  transform: rotate(0);
+  transition: transform 0.3s linear;
+}
+
+.puscica.razsirjena {
+  transform: rotate(180deg);
+}
+
+.kalco-info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+  background-color: var(--color-martinique-light);
+
+  border: 2px ridge var(--color-cedar-wood); 
+}
+
+.zihrDisklejmr {
+  color: var(--color-yellow-sea);
+  margin-bottom: 1rem;
+}
+
+.slika {
+  margin-bottom: 1.5rem;
+}
+
+.zastonj {
+  color: var(--color-green-leaf);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.zaPlacat {
+  color: var(--color-red-beech);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.povezavaZemljevidi {
+  margin: 1rem 0;
+}
+
+.recenzijeNaslov {
+  margin: 1rem 0;
+}
+
+.recenzije {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.recenzija {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid var(--color-cedar-wood);
+
+  padding: .5rem;
+}
+
+.naslov {
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.tekst {
+  font-size: 1rem;
+}

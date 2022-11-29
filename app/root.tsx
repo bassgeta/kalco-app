@@ -14,6 +14,7 @@ export const meta: MetaFunction = () => ({
   title: 'Kalcoti',
   viewport: 'width=device-width,initial-scale=1',
 });
+
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: globalStyles }];
 };
@@ -29,7 +30,7 @@ export default function App() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Butcherman&family=Press+Start+2P&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Merienda:wght@300;900&display=swap"
           rel="stylesheet"
         />
         <Meta />

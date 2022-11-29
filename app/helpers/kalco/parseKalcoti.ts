@@ -1,24 +1,25 @@
-import type { KalcoEntry, KalcoRating } from '~/interfaces/kalco';
+import type { Kalco, KalcoRecenzija } from '~/interfaces/kalco';
 import rawKalcoti from '../../../data.json';
 
-const getKalcoRating = (ratings: KalcoRating[]): number => {
+const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
   return Number(
     (
-      ratings.reduce((sum, rating) => sum + rating.ocena, 0) / ratings.length
+      recenzije.reduce((sum, rating) => sum + rating.ocena, 0) /
+      recenzije.length
     ).toFixed(2)
   );
 };
 
-export function getKalcoti(): KalcoEntry[] {
+export function dwabiKalcote(): Kalco[] {
   return rawKalcoti.map((entry) => ({
     bar: entry.bar,
     linkDoSlike: entry?.linkDoSlike.length > 0 ? entry.linkDoSlike : null,
-    ocena: entry.ratings.length > 0 ? getKalcoRating(entry.ratings) : 0,
+    ocena: entry.recenzije.length > 0 ? dwabiKalcoOceno(entry.recenzije) : 0,
     dzabe: entry.dzabe,
     zihr: entry.zihr,
-    mapsLink: entry.mapsLink,
+    zemljevidPovezava: entry.zemljevidPovezava,
     lat: entry.lat,
     lng: entry.lng,
-    ratings: entry.ratings,
+    recenzije: entry.recenzije,
   }));
 }

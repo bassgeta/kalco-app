@@ -1,10 +1,10 @@
-export interface KalcoRating {
+export interface KalcoRecenzija {
   naslou: string;
   besedilo: string;
   ocena: number;
 }
 
-export interface KalcoEntry {
+export interface Kalco {
   bar: string;
   linkDoSlike: string | null;
   ocena: number;
@@ -13,8 +13,8 @@ export interface KalcoEntry {
     confirmed: boolean;
   };
   zihr: boolean;
-  mapsLink: string;
+  zemljevidPovezava: string;
   lat: number;
   lng: number;
-  ratings: KalcoRating[];
+  recenzije: KalcoRecenzija[];
 }
