@@ -2,45 +2,44 @@
   {
     "bar": "Pivnica Union",
     "linkDoSlike": "",
-    "ocena": 3,
     "dzabe": {
       "je": true,
       "confirmed": true
     },
-    "obstoj": "zihr",
+    "zihr": true,
     "mapsLink": "https://goo.gl/maps/NFHh4fDLHixAebe4A",
     "lat": 46.059765,
     "lng": 14.4985854,
-    "notes": [
+    "ratings": [
       {
         "naslou": "Nic za klicati domov o",
-        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol."
+        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol.",
+        "ocena": 2
       }
     ]
   },
   {
     "bar": "Lepa Zoga",
     "linkDoSlike": "",
-    "ocena": 4,
     "dzabe": {
       "je": false,
       "confirmed": true
     },
-    "obstoj": "zihr",
+    "zihr": true,
     "mapsLink": "https://g.page/LepaZoga?share",
     "lat": 46.0613287,
     "lng": 14.4960384,
-    "notes": [
+    "ratings": [
       {
         "naslou": "Propr kalco, ma je za placat",
-        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol."
+        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol.",
+        "ocena": 4
       }
     ]
   },
   {
     "bar": "Shark bar",
     "linkDoSlike": "",
-    "ocena": 0,
     "dzabe": {
       "je": true,
       "confirmed": false
@@ -48,13 +47,12 @@
     "mapsLink": "https://goo.gl/maps/rQaQViizu4gonvT78",
     "lat": 46.0523753,
     "lng": 14.5300087,
-    "obstoj": "zihr",
-    "notes": []
+    "zihr": true,
+    "ratings": []
   },
   {
     "bar": "Fontana bar",
     "linkDoSlike": "",
-    "ocena": 0,
     "dzabe": {
       "je": true,
       "confirmed": false
@@ -62,13 +60,12 @@
     "mapsLink": "https://goo.gl/maps/6qq1C5LXtTsKmoA37",
     "lat": 46.0747056,
     "lng": 14.5104964,
-    "obstoj": "zihr",
-    "notes": []
+    "zihr": true,
+    "ratings": []
   },
   {
     "bar": "Newcastle",
     "linkDoSlike": "",
-    "ocena": 0,
     "dzabe": {
       "je": true,
       "confirmed": false
@@ -76,8 +73,8 @@
     "mapsLink": "https://goo.gl/maps/p1WyGAyZHQazLYVQA",
     "lat": 46.0652449,
     "lng": 14.5103907,
-    "obstoj": "zihr",
-    "notes": []
+    "zihr": true,
+    "ratings": []
   },
   {
     "bar": "Foerster",
@@ -90,13 +87,12 @@
     "mapsLink": "https://goo.gl/maps/c3Q6YWz3dpZHAHY9A",
     "lat": 46.0470891,
     "lng": 14.4998167,
-    "obstoj": "nezihr",
-    "notes": []
+    "zihr": false,
+    "ratings": []
   },
   {
     "bar": "Harat's pub",
     "linkDoSlike": "",
-    "ocena": 4,
     "dzabe": {
       "je": true,
       "confirmed": true
@@ -104,11 +100,22 @@
     "mapsLink": "https://goo.gl/maps/8CXt4mx57TAsZCsj7",
     "lat": 46.0521921,
     "lng": 14.5098596,
-    "obstoj": "zihr",
-    "notes": [
+    "zihr": true,
+    "ratings": [
       {
         "naslou": "Proper bar kalco, sam en golman safra",
-        "besedilo": "Je kr proper, edin taplau golman ima zmjr komouc u zidi, tku da se ne da prbijat carskh golman2golman golu."
+        "besedilo": "Nej bed, mal ga stopa, treba podmazat. Lokacija je kr bedna, nemas kam dt pive, mal prevc drma, kelnar ti lhk zbije bjro sz kalcota brez truda.",
+        "ocena": 3
+      },
+      {
+        "naslou": "Med dvema ognjema ",
+        "besedilo": "Kalčo v Harat's pub sicer zadovolji potrebo po namiznem nogometu, ko se ta pojavi, vendar bo bodoče igralce čakal marsikateri izziv. Ekipi se bosta razdelili na tisto, ki s komolcem vztrajno moti 30 centimetrov oddaljene sedeče za sabo, in na tisto, ki bo med igro ovirala mimoidoče na poti do stranišča. Odlagališče za pijačo brez poseganja v druge mize ni mogoče (z izjemo bližnje ograje, ki je precej nedostopna). Če pa se igralci ne bodo zmenili za svojo okolico, bo igra tekla nemoteno, saj žogice niso plačljive.",
+        "ocena": 3
+      },
+      {
+        "naslou": "2",
+        "besedilo": "Nej podmazan, lokacija pretty bad med mizami",
+        "ocena": 2
       }
     ]
   }

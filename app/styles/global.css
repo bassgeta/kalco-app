@@ -1,22 +1,16 @@
-/* creepster-regular - latin */
-/* latin */
-@font-face {
-  font-family: 'Racing Sans One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/racingsansone/v13/sykr-yRtm7EvTrXNxkv5jfKKyDCAKHDneJERtQ.woff2) format('woff2');
-}
-
 :root {
-    --color-japanese-laurel: #00980f;
-    --color-green-leaf: #2f770b;
-    --color-casablanca: #f4b457;
-    --color-yellow-sea: #fca406;
-    --color-martinique-light: #423851;
-    --color-martinique-dark: #2f304a;
-    --color-red-beech: #882400;
-    --color-cedar-woord: #782102;
+  --color-japanese-laurel: #00980f;
+  --color-green-leaf: #2f770b;
+  --color-casablanca: #f4b457;
+  --color-yellow-sea: #fca406;
+  --color-martinique-light: #423851;
+  --color-martinique-dark: #2f304a;
+  --color-red-beech: #882400;
+  --color-cedar-woord: #782102;
+  --color-text-primary: var(--color-yellow-sea);
+  --color-text-secondary: var(--color-japanese-laurel);
+  --color-background-primary: var(--color-martinique-dark);
+  --color-border-primary: var(--color-red-beech);
 }
 
 * {
@@ -38,7 +32,7 @@ body {
 
 h1, h2, h3 {
   font-family: 'Butcherman', sans-serif;
-  color: var(--color-japanese-laurel);
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
@@ -58,7 +52,6 @@ p {
   font-family: 'Press Start 2P', sans-serif;
   margin: 0;
   font-size: 1.5rem;
-  color: var(--color-yellow-sea);
 }
 
 a {

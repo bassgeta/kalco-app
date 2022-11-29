@@ -1,3 +1,9 @@
+export interface KalcoRating {
+  naslou: string;
+  besedilo: string;
+  ocena: number;
+}
+
 export interface KalcoEntry {
   bar: string;
   linkDoSlike: string | null;
@@ -6,9 +12,9 @@ export interface KalcoEntry {
     je: boolean;
     confirmed: boolean;
   };
-  obstoj: 'zihr' | 'nezihr';
+  zihr: boolean;
   mapsLink: string;
   lat: number;
   lng: number;
-  notes: Array<{ naslou: string; besedilo: string }>;
+  ratings: KalcoRating[];
 }
