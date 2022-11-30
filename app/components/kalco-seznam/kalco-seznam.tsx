@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { useState } from 'react';
 import type { Kalco } from '~/interfaces/kalco';
 import {
   KalcoVelik,
@@ -13,12 +14,26 @@ export function links() {
 interface KalcoSeznamLastnosti {
   kalcoti: Kalco[];
 }
+// TODO refactor u sidebar pa seznam posjbi
 export const KalcoSeznam: FC<KalcoSeznamLastnosti> = ({ kalcoti }) => {
+  const [jePokazan, setJePokazan] = useState(true);
+
   return (
-    <div className="kalcoSeznam">
-      {kalcoti.map((kalco) => (
-        <KalcoVelik key={kalco.bar} kalco={kalco} />
-      ))}
-    </div>
+    <>
+      <div className={`kalcoSeznam ${!jePokazan ? 'kalcoSeznam-closed' : ''}`}>
+        <button className="close-button" onClick={() => setJePokazan(false)}>
+          X
+        </button>
+        {kalcoti.map((kalco) => (
+          <KalcoVelik key={kalco.bar} kalco={kalco} />
+        ))}
+      </div>
+      <button
+        className={`open-button ${jePokazan ? 'open-button-hidden' : ''}`}
+        onClick={() => setJePokazan(true)}
+      >
+        O
+      </button>
+    </>
   );
 };
