@@ -4,6 +4,7 @@ import {
   KalcoSeznam,
   links as kalcoSeznamLinks,
 } from '~/components/kalco-seznam/kalco-seznam';
+import Zemljevid from '~/components/zemljevid/zemljevid.client';
 import type { Kalco } from '~/interfaces/kalco';
 import { dwabiKalcote } from '../helpers/kalco/parseKalcoti';
 
@@ -21,7 +22,10 @@ export default function Index() {
   return (
     <div>
       <h1>Kalčoti!</h1>
-      <KalcoSeznam kalcoti={kalcoti} />
+      <div style={{ display: 'flex', height: '98vh' }}>
+        <KalcoSeznam kalcoti={kalcoti} />
+        <Zemljevid />
+      </div>
     </div>
   );
 }

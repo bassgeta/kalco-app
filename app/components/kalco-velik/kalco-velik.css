@@ -97,7 +97,7 @@
   flex-direction: column;
   border-bottom: 2px solid var(--color-cedar-wood);
 
-  padding: .5rem;
+  padding: .5rem .5rem .5rem 0;
 }
 
 .naslov {
@@ -108,4 +108,5 @@
 
 .tekst {
   font-size: 1rem;
+  color: var(--color-casablanca);
 }
