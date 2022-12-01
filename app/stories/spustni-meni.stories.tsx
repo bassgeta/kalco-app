@@ -1,4 +1,4 @@
-import { SpustniMeni as Component } from '../../components/spustni-meni/spustni-meni';
+import { SpustniMeni as Component } from '../components/spustni-meni/spustni-meni';
 import type { Story } from '@ladle/react';
 import type { Kalco } from '~/interfaces/kalco';
 
