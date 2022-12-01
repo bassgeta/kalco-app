@@ -1,5 +1,18 @@
 import type { Kalco, KalcoRecenzija } from '~/interfaces/kalco';
-import rawKalcoti from '../../../data.json';
+// TODO plz better automagic
+import balvanija from '~/data/kalcoti/balvanija.json';
+import channelZero from '~/data/kalcoti/channel-zero.json';
+import foerster from '~/data/kalcoti/foerster.json';
+import fontana from '~/data/kalcoti/fontana-cafe.json';
+import galaHala from '~/data/kalcoti/gala-hala.json';
+import haratsPub from '~/data/kalcoti/harats-pub.json';
+import lepaZoga from '~/data/kalcoti/lepa-zoga.json';
+import menzaPriKoritu from '~/data/kalcoti/menza-koritu.json';
+import ortoBar from '~/data/kalcoti/orto-bar.json';
+import pivnicaUnion from '~/data/kalcoti/pivnica-union.json';
+import sharkBar from '~/data/kalcoti/shark-bar.json';
+import sportnaHisa from '~/data/kalcoti/sportna-hisa.json';
+import zorica from '~/data/kalcoti/zorica.json';
 
 const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
   return Number(
@@ -11,7 +24,22 @@ const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
 };
 
 export function dwabiKalcote(): Kalco[] {
-  return rawKalcoti.map((entry) => ({
+  return [
+    balvanija,
+    channelZero,
+    foerster,
+    fontana,
+    galaHala,
+    haratsPub,
+    lepaZoga,
+    menzaPriKoritu,
+    ortoBar,
+    pivnicaUnion,
+    sharkBar,
+    sportnaHisa,
+    zorica,
+  ].map((entry) => ({
+    id: entry.id,
     bar: entry.bar,
     linkDoSlike: entry?.linkDoSlike.length > 0 ? entry.linkDoSlike : null,
     ocena: entry.recenzije.length > 0 ? dwabiKalcoOceno(entry.recenzije) : 0,

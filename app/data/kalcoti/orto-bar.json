@@ -1,0 +1,20 @@
+{
+  "id": "ortich",
+  "bar": "Orto bar",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": false,
+    "confirmed": false
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/uAEJWsAq2QYCDCtz8",
+  "lat": 46.0579033,
+  "lng": 14.52146,
+  "zihr": true,
+  "recenzije": [
+    {
+      "ocena": 4,
+      "naslou": "bom ob priliki kej vc napisala",
+      "besedilo": "u ortoti smo s kolegom igrala proti omarji naberji in ga nesmo prepoznala hahah"
+    }
+  ]
+}

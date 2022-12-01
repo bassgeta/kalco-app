@@ -1,0 +1,15 @@
+{
+  "id": "frstr",
+  "bar": "Foerster",
+  "linkDoSlike": "https://i.imgur.com/CBbt6uu.jpg",
+  "ocena": 0,
+  "dzabe": {
+    "je": false,
+    "confirmed": false
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/c3Q6YWz3dpZHAHY9A",
+  "lat": 46.0470891,
+  "lng": 14.4998167,
+  "zihr": true,
+  "recenzije": []
+}

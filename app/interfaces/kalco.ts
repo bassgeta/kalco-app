@@ -5,6 +5,7 @@ export interface KalcoRecenzija {
 }
 
 export interface Kalco {
+  id: string;
   bar: string;
   linkDoSlike: string | null;
   ocena: number;

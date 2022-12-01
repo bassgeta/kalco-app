@@ -1,0 +1,20 @@
+{
+  "id": "menza",
+  "bar": "Menza pri koritu",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": false,
+    "confirmed": false
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/RjsJ8TwvY4JYkEne7",
+  "lat": 46.0565584,
+  "lng": 14.5171963,
+  "zihr": true,
+  "recenzije": [
+    {
+      "ocena": 5,
+      "naslou": "tekoc, soliden, tipi topi",
+      "besedilo": "laufa, mislm da je 50 centu namest zetona, ampak je sturdy boi. Placa za pivo odlozit je dosti, se splaca obiskat menzo sam zarad tega!"
+    }
+  ]
+}

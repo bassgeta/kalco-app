@@ -1,0 +1,14 @@
+{
+  "id": "zorica",
+  "bar": "Zorica bar",
+  "linkDoSlike": "https://i.imgur.com/FhDfU5p.jpg",
+  "dzabe": {
+    "je": false,
+    "confirmed": false
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/q81bXnvW7vh4CXvg6",
+  "lat": 46.0556079,
+  "lng": 14.5039882,
+  "zihr": true,
+  "recenzije": []
+}
