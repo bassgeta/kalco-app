@@ -1,7 +1,7 @@
 :root {
-  --font-primary: "Merienda", sans-serif;
-  --font-secondary: "Nerko One", sans-serif;
-  --font-tertiary: "Fira Code", mono-space;
+  --font-primary: 'Merienda', sans-serif;
+  --font-secondary: 'Nerko One', sans-serif;
+  --font-tertiary: 'Fira Code', mono-space;
 
   --heading-line-height: 1.5;
   --body-line-height: 1.2;

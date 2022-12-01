@@ -1,4 +1,4 @@
-@import "../../styles/global.css";
+@import '../../styles/global.css';
 
 .kalcoContainer {
   width: 100%;
@@ -33,7 +33,7 @@
   transition: transform 0.4s linear;
   font-variant-ligatures: normal;
   font-family: var(--font-tertiary);
-  font-feature-settings: "liga" 1;
+  font-feature-settings: 'liga' 1;
 }
 
 .puscica.razsirjena {

@@ -13,6 +13,6 @@ module.exports = {
   // serverBuildPath: "api/index.js",
   // publicPath: "/build/",
   getAssetExts() {
-    return ["scss"];
+    return ['scss'];
   },
 };
