@@ -12,5 +12,5 @@ export const Recenzije: Story<RecenzijeLastnosti> = ({ recenzije }) => (
 );
 
 Recenzije.args = {
-  rawRecenzije,
+  recenzije: rawRecenzije,
 };

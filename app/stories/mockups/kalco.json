@@ -1,40 +1,19 @@
-[
-  {
-    "bar": "Pivnica Union",
-    "linkDoSlike": "",
-    "dzabe": {
-      "je": true,
-      "confirmed": true
-    },
-    "zihr": true,
-    "zemljevidPovezava": "https://goo.gl/maps/NFHh4fDLHixAebe4A",
-    "lat": 46.059765,
-    "lng": 14.4985854,
-    "recenzije": [
-      {
-        "naslou": "Nic za klicati domov o",
-        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol.",
-        "ocena": 2
-      }
-    ]
+{
+  "bar": "Pivnica Union",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": true,
+    "confirmed": true
   },
-  {
-    "bar": "Lepa Zoga",
-    "linkDoSlike": "",
-    "dzabe": {
-      "je": false,
-      "confirmed": true
-    },
-    "zihr": true,
-    "zemljevidPovezava": "https://g.page/LepaZoga?share",
-    "lat": 46.0613287,
-    "lng": 14.4960384,
-    "recenzije": [
-      {
-        "naslou": "Propr kalco, ma je za placat",
-        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol.",
-        "ocena": 4
-      }
-    ]
-  }
-]
+  "zihr": true,
+  "zemljevidPovezava": "https://goo.gl/maps/NFHh4fDLHixAebe4A",
+  "lat": 46.059765,
+  "lng": 14.4985854,
+  "recenzije": [
+    {
+      "naslou": "Nic za klicati domov o",
+      "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol.",
+      "ocena": 2
+    }
+  ]
+}
