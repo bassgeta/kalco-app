@@ -1,10 +1,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import type { Kalco } from '~/interfaces/kalco';
-import {
-  SpustniMeni,
-  spustniMeniLinks,
-} from '../../stories/spustni-meni/spustni-meni.stories';
+import { SpustniMeni, spustniMeniLinks } from '../spustni-meni/spustni-meni';
 import styles from './kalzo-seznam.css';
 
 export function links() {
