@@ -1,7 +1,7 @@
 [
   {
     "bar": "Pivnica Union",
-    "linkDoSlike": "",
+    "linkDoSlike": "https://i.imgur.com/97jJ08N.jpeg",
     "dzabe": {
       "je": true,
       "confirmed": true
@@ -20,7 +20,7 @@
   },
   {
     "bar": "Lepa Zoga",
-    "linkDoSlike": "",
+    "linkDoSlike": "https://i.imgur.com/IHmEM9b.jpg",
     "dzabe": {
       "je": false,
       "confirmed": true
@@ -32,7 +32,7 @@
     "recenzije": [
       {
         "naslou": "Propr kalco, ma je za placat",
-        "besedilo": "Je zastonj, kr je kr kul, mal je lhk pa frci bala naokuli. Luknja u enmi goli, pada vn ku das gol.",
+        "besedilo": "Dejansku sta 2 kalcota, tku da je guzva proof, edin tisti noter ima neko rdeco balko ku se obnasa ful cudnu. 50 centu je zeton.",
         "ocena": 4
       }
     ]
@@ -54,7 +54,26 @@
     "bar": "Fontana bar",
     "linkDoSlike": "",
     "dzabe": {
-      "je": true,
+      "je": false,
+      "confirmed": true
+    },
+    "zemljevidPovezava": "https://goo.gl/maps/6qq1C5LXtTsKmoA37",
+    "lat": 46.0747056,
+    "lng": 14.5104964,
+    "zihr": true,
+    "recenzije": [
+      {
+        "ocena": 5,
+        "naslou": "Vrhunski kalco",
+        "besedilo": "je za placat pa u nulo kalcet usaj bil je"
+      }
+    ]
+  },
+  {
+    "bar": "Zorica bar",
+    "linkDoSlike": "https://i.imgur.com/FhDfU5p.jpg",
+    "dzabe": {
+      "je": false,
       "confirmed": false
     },
     "zemljevidPovezava": "https://goo.gl/maps/6qq1C5LXtTsKmoA37",
@@ -64,21 +83,34 @@
     "recenzije": []
   },
   {
-    "bar": "Newcastle",
+    "bar": "Orto bar",
     "linkDoSlike": "",
     "dzabe": {
       "je": false,
       "confirmed": false
     },
-    "zemljevidPovezava": "https://goo.gl/maps/p1WyGAyZHQazLYVQA",
-    "lat": 46.0652449,
-    "lng": 14.5103907,
+    "zemljevidPovezava": "https://goo.gl/maps/6qq1C5LXtTsKmoA37",
+    "lat": 46.0747056,
+    "lng": 14.5104964,
     "zihr": true,
     "recenzije": []
   },
   {
-    "bar": "Foerster",
+    "bar": "Balvanija",
     "linkDoSlike": "",
+    "dzabe": {
+      "je": true,
+      "confirmed": false
+    },
+    "zemljevidPovezava": "https://goo.gl/maps/6qq1C5LXtTsKmoA37",
+    "lat": 46.0747056,
+    "lng": 14.5104964,
+    "zihr": false,
+    "recenzije": []
+  },
+  {
+    "bar": "Foerster",
+    "linkDoSlike": "https://i.imgur.com/CBbt6uu.jpg",
     "ocena": 0,
     "dzabe": {
       "je": false,
@@ -87,12 +119,12 @@
     "zemljevidPovezava": "https://goo.gl/maps/c3Q6YWz3dpZHAHY9A",
     "lat": 46.0470891,
     "lng": 14.4998167,
-    "zihr": false,
+    "zihr": true,
     "recenzije": []
   },
   {
     "bar": "Harat's pub",
-    "linkDoSlike": "",
+    "linkDoSlike": "https://i.imgur.com/Wy3KL5f.jpg",
     "dzabe": {
       "je": true,
       "confirmed": true
