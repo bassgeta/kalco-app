@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-.kalcoGumb {
+.kalcoContainer .kalcoGumb {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,37 +16,37 @@
   padding: 1rem;
 }
 
-.ime {
+.kalcoContainer .ime {
   color: var(--color-yellow-sea);
   font-size: 2rem;
   margin-right: 1rem;
   font-family: 'Nerko One';
 }
 
-.ocena {
+.kalcoContainer .ocena {
   color: var(--color-yellow-sea);
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.pjt {
+.kalcoContainer .pjt {
   color: var(--color-casablanca);
   font-weight: 400;
   font-size: 1.5rem;
 }
 
-.puscica {
+.kalcoContainer .puscica {
   color: var(--color-japanese-laurel);
   margin-left: auto;
   transform: rotate(0);
   transition: transform 0.3s linear;
 }
 
-.puscica.razsirjena {
+.kalcoContainer .puscica.razsirjena {
   transform: rotate(180deg);
 }
 
-.kalco-info {
+.kalcoContainer .kalco-info {
   width: 100%;
 
   display: flex;
@@ -58,44 +58,44 @@
   border: 2px ridge var(--color-cedar-wood); 
 }
 
-.zihrDisklejmr {
+.kalcoContainer .zihrDisklejmr {
   color: var(--color-yellow-sea);
   margin-bottom: 1rem;
 }
 
-.slika {
+.kalcoContainer .slika {
   margin-bottom: 1.5rem;
   max-height: 30vh;
   object-fit: contain;
   object-position: left top; 
 }
 
-.zastonj {
+.kalcoContainer .zastonj {
   color: var(--color-green-leaf);
   font-weight: 700;
   font-size: 1.25rem;
 }
 
-.zaPlacat {
+.kalcoContainer .zaPlacat {
   color: var(--color-red-beech);
   font-weight: 700;
   font-size: 1.25rem;
 }
 
-.povezavaZemljevidi {
+.kalcoContainer .povezavaZemljevidi {
   margin: 1rem 0;
 }
 
-.recenzijeNaslov {
+.kalcoContainer .recenzijeNaslov {
   margin: 1rem 0;
 }
 
-.recenzije {
+.kalcoContainer .recenzije {
   max-height: 40vh;
   overflow-y: auto;
 }
 
-.recenzija {
+.kalcoContainer .recenzija {
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid var(--color-cedar-wood);
@@ -103,13 +103,13 @@
   padding: .5rem .5rem .5rem 0;
 }
 
-.naslov {
+.kalcoContainer .naslov {
   font-weight: 900;
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
-.tekst {
+.kalcoContainer .tekst {
   font-size: 1rem;
   color: var(--color-casablanca);
 }

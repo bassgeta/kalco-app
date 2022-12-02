@@ -10,7 +10,11 @@ import {
   ZemljevidWrapper,
   links as zemljoLinks,
 } from '~/components/zemljevid/zemljevid-wrapper';
-import { KalcoMarker } from '~/components/kalco-marker/kalco-marker.client';
+import {
+  KalcoMarker,
+  links as kalcoMarkerLinks,
+} from '~/components/kalco-marker/kalco-marker.client';
+import markerStyles from '~/components/kalco-marker/kalco-marker.css';
 import styles from '../styles/index.css';
 
 export function loader() {
@@ -22,6 +26,8 @@ export const links: LinksFunction = () => {
     ...kalcoSeznamLinks(),
     ...zemljoLinks(),
     { rel: 'stylesheet', href: styles },
+    // why cant we import the links from a client file?
+    { rel: 'stylesheet', href: markerStyles },
   ];
 };
 
@@ -34,7 +40,7 @@ export default function Index() {
       <div className="map">
         <ZemljevidWrapper>
           {kalcoti.map((kalco) => (
-            <KalcoMarker key={kalco.bar} kalco={kalco} />
+            <KalcoMarker key={kalco.id} kalco={kalco} />
           ))}
         </ZemljevidWrapper>
       </div>

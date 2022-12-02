@@ -4,7 +4,7 @@
   "linkDoSlike": "https://i.imgur.com/CBbt6uu.jpg",
   "ocena": 0,
   "dzabe": {
-    "je": false,
+    "je": true,
     "confirmed": false
   },
   "zemljevidPovezava": "https://goo.gl/maps/c3Q6YWz3dpZHAHY9A",
