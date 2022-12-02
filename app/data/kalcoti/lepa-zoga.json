@@ -1,0 +1,20 @@
+{
+  "id": "lepazwga",
+  "bar": "Lepa Zoga",
+  "linkDoSlike": "https://i.imgur.com/IHmEM9b.jpg",
+  "dzabe": {
+    "je": false,
+    "confirmed": true
+  },
+  "zihr": true,
+  "zemljevidPovezava": "https://g.page/LepaZoga?share",
+  "lat": 46.0613287,
+  "lng": 14.4960384,
+  "recenzije": [
+    {
+      "naslou": "Propr kalco, ma je za placat",
+      "besedilo": "Dejansku sta 2 kalcota, tku da je guzva proof, edin tisti noter ima neko rdeco balko ku se obnasa ful cudnu. 50 centu je zeton.",
+      "ocena": 4
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "fontana",
+  "bar": "Fontana",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": false,
+    "confirmed": true
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/6qq1C5LXtTsKmoA37",
+  "lat": 46.0747056,
+  "lng": 14.5104964,
+  "zihr": true,
+  "recenzije": [
+    {
+      "ocena": 5,
+      "naslou": "Vrhunski kalco",
+      "besedilo": "je za placat pa u nulo kalcet usaj bil je"
+    }
+  ]
+}

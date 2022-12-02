@@ -25,7 +25,7 @@ export const KalcoSeznam: FC<KalcoSeznamLastnosti> = ({ kalcoti }) => {
           X
         </button>
         {kalcoti.map((kalco) => (
-          <KalcoVelik key={kalco.bar} kalco={kalco} />
+          <KalcoVelik key={kalco.id} kalco={kalco} />
         ))}
       </div>
       <button

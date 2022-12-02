@@ -1,0 +1,14 @@
+{
+  "id": "balvanija",
+  "bar": "Balvanija",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": true,
+    "confirmed": false
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/p5rzwXL5z3pdYgUZ6",
+  "lat": 46.0688296,
+  "lng": 14.5186923,
+  "zihr": false,
+  "recenzije": []
+}

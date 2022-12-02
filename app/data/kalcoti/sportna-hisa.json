@@ -1,0 +1,20 @@
+{
+  "id": "2eurakalco",
+  "bar": "Športna Hiša",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": false,
+    "confirmed": true
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/Byduv7xsoBomSW2a6",
+  "lat": 46.0646629,
+  "lng": 14.548715,
+  "zihr": true,
+  "recenzije": [
+    {
+      "ocena": 1,
+      "naslou": "2 eura zeton, sam 7 bal",
+      "besedilo": "Kalco je sam po sebi sicer okej, sam 2 evra na zeton je zelo bolece za denarnico. Razmerje cena pive / cena za zeton mora biti vsaj 2.5, tukaj pa je bolj 1.2. Ne approvamo!"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "haratspab",
+  "bar": "Harat's pub",
+  "linkDoSlike": "https://i.imgur.com/Wy3KL5f.jpg",
+  "dzabe": {
+    "je": true,
+    "confirmed": true
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/8CXt4mx57TAsZCsj7",
+  "lat": 46.0521921,
+  "lng": 14.5098596,
+  "zihr": true,
+  "recenzije": [
+    {
+      "naslou": "Proper bar kalco, sam en golman safra",
+      "besedilo": "Nej bed, mal ga stopa, treba podmazat. Lokacija je kr bedna, nemas kam dt pive, mal prevc drma, kelnar ti lhk zbije bjro sz kalcota brez truda.",
+      "ocena": 3
+    },
+    {
+      "naslou": "Med dvema ognjema ",
+      "besedilo": "Kalčo v Harat's pub sicer zadovolji potrebo po namiznem nogometu, ko se ta pojavi, vendar bo bodoče igralce čakal marsikateri izziv. Ekipi se bosta razdelili na tisto, ki s komolcem vztrajno moti 30 centimetrov oddaljene sedeče za sabo, in na tisto, ki bo med igro ovirala mimoidoče na poti do stranišča. Odlagališče za pijačo brez poseganja v druge mize ni mogoče (z izjemo bližnje ograje, ki je precej nedostopna). Če pa se igralci ne bodo zmenili za svojo okolico, bo igra tekla nemoteno, saj žogice niso plačljive.",
+      "ocena": 3
+    },
+    {
+      "naslou": "2",
+      "besedilo": "Nej podmazan, lokacija pretty bad med mizami",
+      "ocena": 2
+    }
+  ]
+}

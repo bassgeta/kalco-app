@@ -1,0 +1,20 @@
+{
+  "id": "galahala",
+  "bar": "Gala Hala",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": false,
+    "confirmed": true
+  },
+  "zemljevidPovezava": "https://goo.gl/maps/7YLNKqvVjgo669gbA",
+  "lat": 46.0573411,
+  "lng": 14.5167961,
+  "zihr": true,
+  "recenzije": [
+    {
+      "ocena": 5,
+      "naslou": "proper kalco na vrti",
+      "besedilo": "podmazan, laufa, kr dwbr, folk ga rad igra. 50 centu na zeton nej prehudu, sam bi clouk prcakovou da je dzabe"
+    }
+  ]
+}
