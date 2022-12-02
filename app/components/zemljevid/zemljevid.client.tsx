@@ -8,10 +8,8 @@ Leaflet.Icon.Default.imagePath = '../node_modules/leaflet';
 delete Leaflet.Icon.Default.prototype._getIconUrl;
 
 Leaflet.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    'https://upload.wikimedia.org/wikipedia/commons/7/70/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%B5%D1%87%D0%BA%D0%B0_%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%B8.png',
-  iconUrl:
-    'https://upload.wikimedia.org/wikipedia/commons/7/70/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%B5%D1%87%D0%BA%D0%B0_%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%B8.png',
+  iconRetinaUrl: 'https://i.imgur.com/UxAiBHa.png',
+  iconUrl: 'https://i.imgur.com/UxAiBHa.png',
   shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
 
