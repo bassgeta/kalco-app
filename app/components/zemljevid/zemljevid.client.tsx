@@ -31,7 +31,7 @@ export const Zemljevid: FC<PropsWithChildren<{}>> = ({ children }) => {
     <MapContainer
       center={LJUBLJANA_CENTER}
       zoom={13}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       style={{ height: '100%', width: '100%' }}
     >
       <TileLayer
