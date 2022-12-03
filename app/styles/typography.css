@@ -19,7 +19,6 @@
 }
 
 body {
-  margin: 2%;
   font-size: var(--text-lg);
   color: var(--color-primary);
   font-family: var(--font-primary);

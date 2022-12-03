@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, FC } from 'react';
 import { Recenzije, recenzijeLinks } from '../recenzije/recenzije';
 import styles from './spustni-meni.css';
-import type { Story } from '@ladle/react';
 import type { Kalco } from '~/interfaces/kalco';
 
 interface SpustniMeniLastnosti {
@@ -12,7 +11,7 @@ export function spustniMeniLinks() {
   return [{ rel: 'stylesheet', href: styles }, ...recenzijeLinks()];
 }
 
-export const SpustniMeni: Story<SpustniMeniLastnosti> = ({ kalco }) => {
+export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
   const [jeRazsirjen, nastaviJeRazsirjen] = useState(false);
 
   return (
