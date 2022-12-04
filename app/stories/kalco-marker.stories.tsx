@@ -3,7 +3,7 @@ import { ZemljevidWrapper as WrapperComponent } from '../components/zemljevid/ze
 import type { PropsWithChildren } from 'react';
 import type { Story } from '@ladle/react';
 import type { Kalco } from '~/interfaces/kalco';
-import rawKalco from './mockups/kalco.json';
+import pivnicaUnion from '../data/kalcoti/pivnica-union.json';
 
 interface KalcoMarkerLastnosti {
   kalco: Kalco;
@@ -16,7 +16,7 @@ export const KalcoMarker: Story<KalcoMarkerLastnosti> = ({ kalco }) => (
 );
 
 KalcoMarker.args = {
-  kalco: rawKalco,
+  kalco: pivnicaUnion,
 };
 
 const ZemljevidWrapper: Story<PropsWithChildren<{}>> = ({ children }) => (

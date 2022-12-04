@@ -19,7 +19,7 @@ const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
     (
       recenzije.reduce((sum, rating) => sum + rating.ocena, 0) /
       recenzije.length
-    ).toFixed(2)
+    ).toFixed(2),
   );
 };
 

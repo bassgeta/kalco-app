@@ -18,7 +18,7 @@ export const KalcoSeznam: FC<KalcoSeznamLastnosti> = ({ kalcoti }) => {
   return (
     <>
       <div className={`kalcoSeznam ${!jePokazan ? 'kalcoSeznam-closed' : ''}`}>
-        <button className='close-button' onClick={() => setJePokazan(false)}>
+        <button className="close-button" onClick={() => setJePokazan(false)}>
           X
         </button>
         {kalcoti.map((kalco) => (

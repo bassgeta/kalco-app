@@ -1,7 +1,7 @@
 import { Recenzije as Component } from '../components/recenzije/recenzije';
 import type { Story } from '@ladle/react';
 import type { KalcoRecenzija } from '~/interfaces/kalco';
-import rawRecenzije from './mockups/recenzije.json';
+import harats from '../data/kalcoti/harats-pub.json';
 
 interface RecenzijeLastnosti {
   recenzije: KalcoRecenzija[];
@@ -12,5 +12,5 @@ export const Recenzije: Story<RecenzijeLastnosti> = ({ recenzije }) => (
 );
 
 Recenzije.args = {
-  recenzije: rawRecenzije,
+  recenzije: harats.recenzije,
 };

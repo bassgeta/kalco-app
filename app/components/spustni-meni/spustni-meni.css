@@ -10,7 +10,7 @@
   border-left: 2px dotted var(--color-secondary);
 }
 
-.kalcoGumb {
+.kalcoContainer .kalcoGumb {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,15 +18,15 @@
   padding: var(--space-sm);
 }
 
-.ime {
+.kalcoContainer .ime {
   margin-right: var(--space-sm);
 }
 
-.pjt {
+.kalcoContainer .pjt {
   font-weight: 400;
 }
 
-.puscica {
+.kalcoContainer .puscica {
   color: var(--color-primary);
   margin-left: auto;
   transform: rotate(90deg);
@@ -36,11 +36,11 @@
   font-feature-settings: 'liga' 1;
 }
 
-.puscica.razsirjena {
+.kalcoContainer .puscica.razsirjena {
   transform: rotate(630deg);
 }
 
-.kalco-info {
+.kalcoContainer .kalco-info {
   width: 100%;
 
   display: flex;
@@ -52,29 +52,36 @@
   border: 2px ridge var(--color-tertiary);
 }
 
-.zihrDisklejmr {
+.kalcoContainer .slika {
+  margin-bottom: 1.5rem;
+  max-height: 30vh;
+  object-fit: contain;
+  object-position: left top;
+}
+
+.kalcoContainer .zihrDisklejmr {
   color: var(--color-yellow-sea);
   margin-bottom: var(--space-sm);
 }
 
-.zastonj {
+.kalcoContainer .zastonj {
   color: var(--color-green-leaf);
 }
 
-.zaPlacat {
+.kalcoContainer .zaPlacat {
   color: var(--color-tertiary);
   font-weight: 700;
 }
 
-.slika {
+.kalcoContainer .slika {
   margin-bottom: var(--space-md);
 }
 
-.povezavaZemljevidi {
+.kalcoContainer .povezavaZemljevidi {
   margin: var(--space-md) 0;
 }
 
-.naslov {
+.kalcoContainer .naslov {
   font-weight: 900;
   margin-bottom: var(--space-sm);
 }

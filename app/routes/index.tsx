@@ -35,9 +35,9 @@ export default function Index() {
   const kalcoti = useLoaderData<Kalco[]>();
 
   return (
-    <div className='index-page'>
+    <div className="index-page">
       <KalcoSeznam kalcoti={kalcoti} />
-      <div className='map'>
+      <div className="map">
         <ZemljevidWrapper>
           {kalcoti.map((kalco) => (
             <KalcoMarker key={kalco.id} kalco={kalco} />

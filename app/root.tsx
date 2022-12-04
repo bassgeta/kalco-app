@@ -21,17 +21,17 @@ export const links: LinksFunction = () => {
 
 export default function App() {
   return (
-    <html lang='en'>
+    <html lang="en">
       <head>
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='true'
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
         />
         <link
-          href='https://fonts.googleapis.com/css2?family=Fira+Code&family=Nerko+One&family=Merienda:wght@300;900&display=swap'
-          rel='stylesheet'
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Nerko+One&family=Merienda:wght@300;900&display=swap"
+          rel="stylesheet"
         />
         <Meta />
         <Links />
