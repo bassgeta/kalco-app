@@ -1,9 +1,9 @@
 .leaflet-popup-content-wrapper {
-  background-color: var(--color-background-primary);
+  background-color: var(--color-background);
 }
 
 .leaflet-popup-tip {
-  background-color: var(--color-background-primary);
+  background-color: var(--color-background);
 }
 
 .kalco-povzetek {
@@ -15,7 +15,7 @@
 }
 
 .kalco-povzetek .bar {
-  color: var(--color-text-primary);
+  color: var(--color-primary);
   margin-bottom: 0.5rem;
 
   font-family: 'Nerko One';
@@ -23,24 +23,24 @@
 }
 
 .kalco-povzetek .zastonj-malu {
-  color: var(--color-green-leaf);
+  color: var(--color-secondary);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .kalco-povzetek .zaPlacat-malu {
-  color: var(--color-red-beech);
+  color: var(--color-tertiary);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .kalco-povzetek .ocena {
-  color: var(--color-casablanca);
+  color: var(--color-primary);
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 .kalco-povzetek .pejdi-cje {
-  color: var(--color-green-leaf);
+  color: var(--color-primary);
   margin-top: 0.75rem;
 }
