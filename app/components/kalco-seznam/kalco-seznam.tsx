@@ -1,14 +1,11 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import type { Kalco } from '~/interfaces/kalco';
-import {
-  KalcoVelik,
-  links as kalcoVelikLinks,
-} from '../kalco-velik/kalco-velik';
+import { SpustniMeni, spustniMeniLinks } from '../spustni-meni/spustni-meni';
 import styles from './kalzo-seznam.css';
 
 export function links() {
-  return [...kalcoVelikLinks(), { rel: 'stylesheet', href: styles }];
+  return [...spustniMeniLinks(), { rel: 'stylesheet', href: styles }];
 }
 
 interface KalcoSeznamLastnosti {
@@ -25,7 +22,7 @@ export const KalcoSeznam: FC<KalcoSeznamLastnosti> = ({ kalcoti }) => {
           X
         </button>
         {kalcoti.map((kalco) => (
-          <KalcoVelik key={kalco.id} kalco={kalco} />
+          <SpustniMeni key={kalco.bar} kalco={kalco} />
         ))}
       </div>
       <button

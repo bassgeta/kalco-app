@@ -1,0 +1,87 @@
+@import '../../styles/global.css';
+
+.kalcoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  padding: var(--space-xxs) var(--space-xxs);
+  border-bottom: 2px dotted var(--color-tertiary);
+  border-left: 2px dotted var(--color-secondary);
+}
+
+.kalcoContainer .kalcoGumb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: var(--space-sm);
+}
+
+.kalcoContainer .ime {
+  margin-right: var(--space-sm);
+}
+
+.kalcoContainer .pjt {
+  font-weight: 400;
+}
+
+.kalcoContainer .puscica {
+  color: var(--color-primary);
+  margin-left: auto;
+  transform: rotate(90deg);
+  transition: transform 0.4s linear;
+  font-variant-ligatures: normal;
+  font-family: var(--font-tertiary);
+  font-feature-settings: 'liga' 1;
+}
+
+.kalcoContainer .puscica.razsirjena {
+  transform: rotate(630deg);
+}
+
+.kalcoContainer .kalco-info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--space-sm);
+  background-color: var(--color-foreground);
+
+  border: 2px ridge var(--color-tertiary);
+}
+
+.kalcoContainer .slika {
+  margin-bottom: 1.5rem;
+  max-height: 30vh;
+  object-fit: contain;
+  object-position: left top;
+}
+
+.kalcoContainer .zihrDisklejmr {
+  color: var(--color-yellow-sea);
+  margin-bottom: var(--space-sm);
+}
+
+.kalcoContainer .zastonj {
+  color: var(--color-green-leaf);
+}
+
+.kalcoContainer .zaPlacat {
+  color: var(--color-tertiary);
+  font-weight: 700;
+}
+
+.kalcoContainer .slika {
+  margin-bottom: var(--space-md);
+}
+
+.kalcoContainer .povezavaZemljevidi {
+  margin: var(--space-md) 0;
+}
+
+.kalcoContainer .naslov {
+  font-weight: 900;
+  margin-bottom: var(--space-sm);
+}

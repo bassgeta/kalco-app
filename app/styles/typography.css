@@ -1,0 +1,85 @@
+:root {
+  --font-primary: 'Merienda', sans-serif;
+  --font-secondary: 'Nerko One', sans-serif;
+  --font-tertiary: 'Fira Code', mono-space;
+
+  --heading-line-height: 1.5;
+  --body-line-height: 1.2;
+  --body-letter-spacing: 0.05em;
+
+  --text-xxs: 10px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-base: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-xxl: 28px;
+  --text-xxxl: 32px;
+}
+
+body {
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+form legend {
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-xxs);
+  line-height: var(--heading-line-height);
+  margin: 0;
+}
+
+h1,
+.text--xxl {
+  font-size: var(--text-xxxl);
+  color: var(--color-primary);
+}
+
+h2,
+.text--xl {
+  font-size: var(--text-xxl);
+}
+
+h3,
+.text--lg {
+  font-size: var(--text-xl);
+}
+
+h4,
+.text--md {
+  font-size: var(--text-lg);
+}
+
+.text--sm,
+small {
+  font-size: var(--text-sm);
+}
+
+.text--xs {
+  font-size: var(--text-xs);
+}
+
+p {
+  line-height: var(--body-line-height);
+  font-size: var(--text-base);
+  margin: 0;
+}
+
+span {
+  color: var(--color-secondary);
+}
+
+a {
+  line-height: var(--body-line-height);
+  font-family: var(--font-secondary);
+  font-size: var(--text-xl);
+  color: var(--color-green-leaf);
+  text-decoration: underline;
+}

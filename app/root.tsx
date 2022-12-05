@@ -30,7 +30,7 @@ export default function App() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Merienda:wght@300;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Nerko+One&family=Merienda:wght@300;900&display=swap"
           rel="stylesheet"
         />
         <Meta />
