@@ -1,4 +1,5 @@
-import { useState, FC } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 import { Recenzije, recenzijeLinks } from '../recenzije/recenzije';
 import styles from './spustni-meni.css';
 import type { Kalco } from '~/interfaces/kalco';
