@@ -20,13 +20,22 @@ export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
         className="kalcoGumb"
         onClick={() => nastaviJeRazsirjen((je) => !je)}
       >
-        <h3 className="ime">{kalco.bar}</h3>
-        {kalco.ocena > 0 && (
-          <h2>
-            <span>{kalco.ocena} / </span>
-            <span className="pjt">5</span>
-          </h2>
-        )}
+        <div className="ocenaInIme">
+          <h3 className="ime">{kalco.bar}</h3>
+          <div className="ocenaInStevilka">
+            <span className="ocenaStevilka">({kalco.ocena})</span>
+            <span
+              className="ocena"
+              style={
+                {
+                  '--ocene-sirina': `${Math.round((kalco.ocena / 5) * 100)}%`,
+                } as React.CSSProperties
+              }
+            >
+              ★★★★★
+            </span>
+          </div>
+        </div>
         <div className={`puscica ${jeRazsirjen ? 'razsirjena' : ''}`}>
           {'->'}
         </div>
@@ -38,7 +47,7 @@ export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
             <img src={kalco.linkDoSlike} alt="kalco-slika" className="slika" />
           )}
           {kalco.dzabe.je ? (
-            <h4>Dzabe</h4>
+            <h4 className="zastonj">Dzabe</h4>
           ) : (
             <h4 className="zaPlacat">Za placat</h4>
           )}

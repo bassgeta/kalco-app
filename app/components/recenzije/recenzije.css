@@ -3,21 +3,21 @@
   padding: var(--space-sm);
 }
 
-.glavni-naslov {
+.recenzije-okvir .glavni-naslov {
   margin-bot: var(--space-md);
 }
 
-.recenzije {
+.recenzije-okvir .recenzije {
   max-height: 40vh;
   overflow-y: auto;
   margin-left: var(--space-xs);
 }
 
-.ocena {
+.recenzije-okvir .ocena {
   color: var(--color-primary);
 }
 
-.recenzija {
+.recenzije-okvir .recenzija {
   display: flex;
   flex-direction: column;
   border-bottom: 2px dotted var(--color-tertiary);
