@@ -2,13 +2,18 @@ import { useState, FC } from 'react';
 import { Recenzije, recenzijeLinks } from '../recenzije/recenzije';
 import styles from './spustni-meni.css';
 import type { Kalco } from '~/interfaces/kalco';
+import { Ocena, links as ocenaLinks } from '../ocena/ocena';
 
 interface SpustniMeniLastnosti {
   kalco: Kalco;
 }
 
 export function spustniMeniLinks() {
-  return [{ rel: 'stylesheet', href: styles }, ...recenzijeLinks()];
+  return [
+    ...recenzijeLinks(),
+    ...ocenaLinks(),
+    { rel: 'stylesheet', href: styles },
+  ];
 }
 
 export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
@@ -22,22 +27,10 @@ export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
       >
         <div className="ocenaInIme">
           <h3 className="ime">{kalco.bar}</h3>
-          <div className="ocenaInStevilka">
-            <span className="ocenaStevilka">({kalco.ocena})</span>
-            <span
-              className="ocena"
-              style={
-                {
-                  '--ocene-sirina': `${Math.round((kalco.ocena / 5) * 100)}%`,
-                } as React.CSSProperties
-              }
-            >
-              ★★★★★
-            </span>
-          </div>
+          <Ocena ocena={kalco.ocena} />
         </div>
         <div className={`puscica ${jeRazsirjen ? 'razsirjena' : ''}`}>
-          {'->'}
+          {'↓'}
         </div>
       </button>
       {jeRazsirjen && (

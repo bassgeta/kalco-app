@@ -24,37 +24,9 @@
 .kalcoContainer .ime {
 }
 
-.kalcoContainer .ocenaInStevilka {
-  display: flex;
-  align-items: center;
-}
-
-.kalcoContainer .ocena {
-  font-size: var(--text-md);
-
-  background-color: gray;
-  background-image: linear-gradient(yellow, yellow);
-  background-size: var(--ocene-sirina);
-  background-repeat: no-repeat;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-
-.kalcoContainer .ocenaStevilka {
-  font-size: var(--text-sm);
-  color: var(--color-tertiary);
-  font-weight: 700;
-
-  margin-right: var(--space-xxs);
-}
-
 .kalcoContainer .puscica {
   color: var(--color-primary);
   margin-left: var(--space-md);
-  transform: rotate(90deg);
   transition: transform 0.4s linear;
   font-variant-ligatures: normal;
   font-family: var(--font-tertiary);
@@ -62,7 +34,7 @@
 }
 
 .kalcoContainer .puscica.razsirjena {
-  transform: rotate(630deg);
+  transform: rotate(540deg);
 }
 
 .kalcoContainer .kalco-info {

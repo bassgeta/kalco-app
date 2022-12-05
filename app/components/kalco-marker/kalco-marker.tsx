@@ -1,7 +1,7 @@
 import type { Kalco } from '~/interfaces/kalco';
 import { KalcoMarker } from './kalco-marker.client';
-import { FC } from 'react';
-import { LinksFunction } from '@remix-run/node';
+import type { FC } from 'react';
+import type { LinksFunction } from '@remix-run/node';
 import styles from './kalco-marker.css';
 
 export const links: LinksFunction = () => {
