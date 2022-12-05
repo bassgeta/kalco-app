@@ -49,7 +49,7 @@
   display: none;
   padding: 1rem;
   border-radius: 50%;
-  background-color: var(--color-japanese-laurel);
+  background-color: var(--color-primary);
 }
 
 @media (max-width: 600px) {

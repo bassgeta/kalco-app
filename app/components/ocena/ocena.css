@@ -1,0 +1,26 @@
+.ocenaInStevilka {
+  display: flex;
+  align-items: center;
+}
+
+.ocenaInStevilka .ocena {
+  font-size: var(--text-md);
+
+  background-color: gray;
+  background-image: linear-gradient(yellow, yellow);
+  background-size: var(--ocene-sirina);
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.ocenaInStevilka .ocenaStevilka {
+  font-size: var(--text-sm);
+  color: var(--color-tertiary);
+  font-weight: 700;
+
+  margin-right: var(--space-xxs);
+}

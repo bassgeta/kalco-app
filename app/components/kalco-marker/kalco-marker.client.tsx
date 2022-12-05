@@ -1,12 +1,7 @@
 import { Marker, Popup } from 'react-leaflet';
 import type { FC } from 'react';
 import type { Kalco } from '~/interfaces/kalco';
-import type { LinksFunction } from '@remix-run/node';
-import styles from './kalco-marker.css';
-
-export const links: LinksFunction = () => {
-  return [{ rel: 'stylesheet', href: styles }];
-};
+import { Ocena } from '../ocena/ocena';
 
 interface KalcoMarkerLastnosti {
   kalco: Kalco;
@@ -23,7 +18,7 @@ export const KalcoMarker: FC<KalcoMarkerLastnosti> = ({ kalco }) => {
           ) : (
             <span className="zaPlacat-malu">Za placat</span>
           )}
-          {kalco.ocena > 0 && <span className="ocena">{kalco.ocena} / 5 </span>}
+          <Ocena ocena={kalco.ocena} />
           <a
             href={kalco.zemljevidPovezava}
             target="_blank"
