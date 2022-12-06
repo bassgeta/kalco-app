@@ -2,6 +2,7 @@ import type { FC, PropsWithChildren } from 'react';
 import type { LatLngTuple } from 'leaflet';
 import Leaflet from 'leaflet';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
+import styles from 'leaflet/dist/leaflet.css';
 
 Leaflet.Icon.Default.imagePath = '../node_modules/leaflet';
 
@@ -26,18 +27,21 @@ const ClickHandler = () => {
 };
 export const Zemljevid: FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
-    <MapContainer
-      center={LJUBLJANA_CENTER}
-      zoom={13}
-      scrollWheelZoom={true}
-      style={{ height: '100%', width: '100%' }}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <ClickHandler />
-      {children}
-    </MapContainer>
+    <>
+      <link rel="stylesheet" href={styles} />
+      <MapContainer
+        center={LJUBLJANA_CENTER}
+        zoom={13}
+        scrollWheelZoom={true}
+        style={{ height: '100%', width: '100%' }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <ClickHandler />
+        {children}
+      </MapContainer>
+    </>
   );
 };

@@ -4,6 +4,7 @@ import { Recenzije, recenzijeLinks } from '../recenzije/recenzije';
 import styles from './spustni-meni.css';
 import type { Kalco } from '~/interfaces/kalco';
 import { Ocena, links as ocenaLinks } from '../ocena/ocena';
+import { useSearchParams } from '@remix-run/react';
 
 interface SpustniMeniLastnosti {
   kalco: Kalco;
@@ -18,13 +19,21 @@ export function spustniMeniLinks() {
 }
 
 export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
-  const [jeRazsirjen, nastaviJeRazsirjen] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const aktivenKalco = searchParams.get('kalco');
+  const jeRazsirjen = aktivenKalco === kalco.id;
 
   return (
     <div className="kalcoContainer">
       <button
         className="kalcoGumb"
-        onClick={() => nastaviJeRazsirjen((je) => !je)}
+        onClick={() => {
+          if (jeRazsirjen) {
+            setSearchParams({});
+          } else {
+            setSearchParams({ kalco: kalco.id });
+          }
+        }}
       >
         <div className="ocenaInIme">
           <h3 className="ime">{kalco.bar}</h3>
