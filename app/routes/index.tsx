@@ -7,7 +7,6 @@ import {
 import type { Kalco } from '~/interfaces/kalco';
 import { dwabiKalcote } from '../helpers/kalco/parseKalcoti';
 import { Zemljevid } from '~/components/zemljevid/zemljevid.client';
-import { KalcoMarker } from '~/components/kalco-marker/kalco-marker.client';
 import styles from '../styles/index.css';
 import { ClientOnly } from 'remix-utils';
 
@@ -26,15 +25,7 @@ export default function Index() {
     <div className="index-page">
       <KalcoSeznam kalcoti={kalcoti} />
       <div className="map">
-        <ClientOnly>
-          {() => (
-            <Zemljevid>
-              {kalcoti.map((kalco) => (
-                <KalcoMarker key={kalco.id} kalco={kalco} />
-              ))}
-            </Zemljevid>
-          )}
-        </ClientOnly>
+        <ClientOnly>{() => <Zemljevid kalcoti={kalcoti} />}</ClientOnly>
       </div>
     </div>
   );

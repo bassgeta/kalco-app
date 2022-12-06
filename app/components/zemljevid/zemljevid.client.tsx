@@ -1,8 +1,11 @@
-import type { FC, PropsWithChildren } from 'react';
+import type { FC } from 'react';
+import { useRef } from 'react';
 import type { LatLngTuple } from 'leaflet';
 import Leaflet from 'leaflet';
-import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import styles from 'leaflet/dist/leaflet.css';
+import type { Kalco } from '~/interfaces/kalco';
+import { KalcoMarker } from '../kalco-marker/kalco-marker.client';
 
 Leaflet.Icon.Default.imagePath = '../node_modules/leaflet';
 
@@ -16,16 +19,13 @@ Leaflet.Icon.Default.mergeOptions({
 
 const LJUBLJANA_CENTER: LatLngTuple = [46.0542, 14.52];
 
-const ClickHandler = () => {
-  const map = useMapEvents({
-    popupopen: (a) => {
-      console.log('ajej!', a);
-    },
-  });
+interface ZemljevidLastnosti {
+  kalcoti: Kalco[];
+}
 
-  return null;
-};
-export const Zemljevid: FC<PropsWithChildren<{}>> = ({ children }) => {
+export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
+  const markerRefs = useRef({});
+
   return (
     <>
       <link rel="stylesheet" href={styles} />
@@ -39,8 +39,9 @@ export const Zemljevid: FC<PropsWithChildren<{}>> = ({ children }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <ClickHandler />
-        {children}
+        {kalcoti.map((kalco) => (
+          <KalcoMarker key={kalco.id} kalco={kalco} />
+        ))}
       </MapContainer>
     </>
   );
