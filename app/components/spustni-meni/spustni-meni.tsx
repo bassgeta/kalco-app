@@ -1,5 +1,6 @@
 import type { FC } from 'react';
-import { useState } from 'react';
+import { useSearchParams } from '@remix-run/react';
+import { useEffect, useMemo, useRef } from 'react';
 import { Recenzije, recenzijeLinks } from '../recenzije/recenzije';
 import styles from './spustni-meni.css';
 import type { Kalco } from '~/interfaces/kalco';
@@ -18,13 +19,33 @@ export function spustniMeniLinks() {
 }
 
 export const SpustniMeni: FC<SpustniMeniLastnosti> = ({ kalco }) => {
-  const [jeRazsirjen, nastaviJeRazsirjen] = useState(false);
+  const kalcoRef = useRef<HTMLDivElement | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const jeRazsirjen = useMemo(
+    () => searchParams.get('kalco') === kalco.id,
+    [kalco.id, searchParams],
+  );
+
+  useEffect(() => {
+    if (jeRazsirjen) {
+      kalcoRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }, [jeRazsirjen]);
 
   return (
-    <div className="kalcoContainer">
+    <div className="kalcoContainer" ref={kalcoRef}>
       <button
         className="kalcoGumb"
-        onClick={() => nastaviJeRazsirjen((je) => !je)}
+        onClick={() => {
+          if (jeRazsirjen) {
+            setSearchParams({});
+          } else {
+            setSearchParams({ kalco: kalco.id });
+          }
+        }}
       >
         <div className="ocenaInIme">
           <h3 className="ime">{kalco.bar}</h3>
