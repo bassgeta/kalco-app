@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { useEffect } from 'react';
 import { useRef } from 'react';
 import type { LatLngTuple } from 'leaflet';
 import Leaflet from 'leaflet';
@@ -6,6 +7,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import styles from 'leaflet/dist/leaflet.css';
 import type { Kalco } from '~/interfaces/kalco';
 import { KalcoMarker } from '../kalco-marker/kalco-marker.client';
+import { useSearchParams } from '@remix-run/react';
 
 Leaflet.Icon.Default.imagePath = '../node_modules/leaflet';
 
@@ -24,7 +26,28 @@ interface ZemljevidLastnosti {
 }
 
 export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
-  const markerRefs = useRef({});
+  const mapRef = useRef<Leaflet.Map>(null);
+  const markerRefs = useRef<Record<string, Leaflet.Marker>>({});
+
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const aktivenKalco = searchParams.get('kalco');
+
+    if (aktivenKalco !== null) {
+      const markerToOpen: Leaflet.Marker = markerRefs.current[aktivenKalco];
+      if (markerToOpen) {
+        markerToOpen.openPopup();
+        mapRef.current?.flyTo(markerToOpen.getLatLng());
+      }
+    } else {
+      mapRef.current?.closePopup();
+    }
+  }, [searchParams]);
+
+  const addMarkerRef = (kalcoId: string, markerRef: Leaflet.Marker) => {
+    markerRefs.current[kalcoId] = markerRef;
+  };
 
   return (
     <>
@@ -34,13 +57,18 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
         zoom={13}
         scrollWheelZoom={true}
         style={{ height: '100%', width: '100%' }}
+        ref={mapRef}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {kalcoti.map((kalco) => (
-          <KalcoMarker key={kalco.id} kalco={kalco} />
+          <KalcoMarker
+            key={kalco.id}
+            kalco={kalco}
+            addMarkerRef={addMarkerRef}
+          />
         ))}
       </MapContainer>
     </>
