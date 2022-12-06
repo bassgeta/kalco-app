@@ -1,0 +1,29 @@
+.gumb-kontejnr {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 8px;
+  right: 8px;
+}
+
+.gumb-kontejnr .menjacina-gumb {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-color: var(--color-primary);
+
+  font-size: var(--text-xxxl);
+  line-height: 50px;
+}
+
+.skrij-ga-gagagigo {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .gumb-kontejnr {
+    display: flex;
+  }
+}

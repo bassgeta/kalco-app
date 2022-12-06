@@ -17,17 +17,6 @@
   margin-bottom: 1rem;
 }
 
-.kalcoSeznam-closed {
-  display: none;
-}
-
-.close-button {
-  display: none;
-  align-self: flex-end;
-
-  margin-bottom: 1rem;
-}
-
 @media (max-width: 600px) {
   .kalcoSeznam {
     position: absolute;
@@ -35,29 +24,4 @@
     left: 0;
     width: 100vw;
   }
-  .close-button {
-    display: flex;
-  }
-}
-
-.open-button {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1;
-
-  display: none;
-  padding: 1rem;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-}
-
-@media (max-width: 600px) {
-  .open-button {
-    display: flex;
-  }
-}
-
-.open-button-hidden {
-  display: none;
 }

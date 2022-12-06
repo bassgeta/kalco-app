@@ -25,36 +25,60 @@ interface ZemljevidLastnosti {
 }
 
 export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
-  const mapRef = useRef<Leaflet.Map>(null);
+  const mapRef = useRef<Leaflet.Map | null>(null);
+  const markerRefs = useRef<Record<string, Leaflet.Marker>>({});
 
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const aktivenKalco = kalcoti.find(
-      (k) => k.id === searchParams.get('kalco'),
-    );
+    const aktivenKalco = searchParams.get('kalco');
 
-    if (aktivenKalco) {
-      mapRef.current?.flyTo([aktivenKalco.lat, aktivenKalco.lng]);
+    if (aktivenKalco !== null) {
+      const markerToOpen: Leaflet.Marker = markerRefs.current[aktivenKalco];
+      if (markerToOpen) {
+        markerToOpen.openPopup();
+        mapRef.current?.flyTo(markerToOpen.getLatLng());
+      }
+    } else {
+      mapRef.current?.closePopup();
     }
-  }, [kalcoti, searchParams]);
+  }, [searchParams]);
+
+  const addMarkerRef = (kalcoId: string, markerRef: Leaflet.Marker) => {
+    markerRefs.current[kalcoId] = markerRef;
+  };
 
   return (
     <>
       <link rel="stylesheet" href={styles} />
       <MapContainer
         center={LJUBLJANA_CENTER}
+        minZoom={9}
         zoom={13}
         scrollWheelZoom={true}
         style={{ height: '100%', width: '100%' }}
-        ref={mapRef}
+        ref={(ref) => {
+          if (ref !== null) {
+            ref.setMaxBounds(
+              Leaflet.latLngBounds(
+                Leaflet.latLng(44.912265631677194, 10.972502324763683),
+                Leaflet.latLng(47.12054759416494, 17.852753802963736),
+              ),
+            );
+            mapRef.current = ref;
+          }
+        }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {kalcoti.map((kalco) => (
-          <KalcoMarker key={kalco.id} kalco={kalco} />
+          <KalcoMarker
+            key={kalco.id}
+            addMarkerRef={addMarkerRef}
+            kalco={kalco}
+          />
         ))}
       </MapContainer>
     </>
