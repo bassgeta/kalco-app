@@ -13,10 +13,8 @@ interface KalcoMarkerLastnosti {
 }
 
 export const KalcoMarker: FC<KalcoMarkerLastnosti> = ({ kalco }) => {
-  const [, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const markerRef = useRef<LMarker>(null);
-
-  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     const aktivenKalco = searchParams.get('kalco');
