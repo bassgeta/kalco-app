@@ -1,6 +1,5 @@
 import type { FC } from 'react';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import type { LatLngTuple } from 'leaflet';
 import Leaflet from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
@@ -27,27 +26,18 @@ interface ZemljevidLastnosti {
 
 export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
   const mapRef = useRef<Leaflet.Map>(null);
-  const markerRefs = useRef<Record<string, Leaflet.Marker>>({});
 
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const aktivenKalco = searchParams.get('kalco');
+    const aktivenKalco = kalcoti.find(
+      (k) => k.id === searchParams.get('kalco'),
+    );
 
-    if (aktivenKalco !== null) {
-      const markerToOpen: Leaflet.Marker = markerRefs.current[aktivenKalco];
-      if (markerToOpen) {
-        markerToOpen.openPopup();
-        mapRef.current?.flyTo(markerToOpen.getLatLng());
-      }
-    } else {
-      mapRef.current?.closePopup();
+    if (aktivenKalco) {
+      mapRef.current?.flyTo([aktivenKalco.lat, aktivenKalco.lng]);
     }
-  }, [searchParams]);
-
-  const addMarkerRef = (kalcoId: string, markerRef: Leaflet.Marker) => {
-    markerRefs.current[kalcoId] = markerRef;
-  };
+  }, [kalcoti, searchParams]);
 
   return (
     <>
@@ -64,11 +54,7 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {kalcoti.map((kalco) => (
-          <KalcoMarker
-            key={kalco.id}
-            kalco={kalco}
-            addMarkerRef={addMarkerRef}
-          />
+          <KalcoMarker key={kalco.id} kalco={kalco} />
         ))}
       </MapContainer>
     </>

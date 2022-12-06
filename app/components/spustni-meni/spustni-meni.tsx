@@ -1,12 +1,10 @@
 import type { FC } from 'react';
-import { useEffect } from 'react';
-import { useMemo } from 'react';
-import { useRef } from 'react';
+import { useSearchParams } from '@remix-run/react';
+import { useEffect, useMemo, useRef } from 'react';
 import { Recenzije, recenzijeLinks } from '../recenzije/recenzije';
 import styles from './spustni-meni.css';
 import type { Kalco } from '~/interfaces/kalco';
 import { Ocena, links as ocenaLinks } from '../ocena/ocena';
-import { useSearchParams } from '@remix-run/react';
 
 interface SpustniMeniLastnosti {
   kalco: Kalco;

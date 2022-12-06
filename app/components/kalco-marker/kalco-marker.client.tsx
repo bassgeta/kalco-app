@@ -1,5 +1,7 @@
 import { Marker, Popup } from 'react-leaflet';
 import type { FC } from 'react';
+import { useEffect } from 'react';
+import { useRef } from 'react';
 import type { Kalco } from '~/interfaces/kalco';
 import { Ocena } from '../ocena/ocena';
 import styles from './kalco-marker.css';
@@ -8,14 +10,28 @@ import { useSearchParams } from '@remix-run/react';
 
 interface KalcoMarkerLastnosti {
   kalco: Kalco;
-  addMarkerRef: (markerId: string, markerRef: LMarker) => void;
 }
 
-export const KalcoMarker: FC<KalcoMarkerLastnosti> = ({
-  addMarkerRef,
-  kalco,
-}) => {
+export const KalcoMarker: FC<KalcoMarkerLastnosti> = ({ kalco }) => {
   const [, setSearchParams] = useSearchParams();
+  const markerRef = useRef<LMarker>(null);
+
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const aktivenKalco = searchParams.get('kalco');
+
+    if (!markerRef.current) {
+      return;
+    }
+
+    if (aktivenKalco === kalco.id) {
+      markerRef.current.openPopup();
+    } else {
+      markerRef.current.closePopup();
+    }
+  }, [kalco.id, searchParams]);
+
   return (
     <>
       <link rel="stylesheet" href={styles} />
@@ -29,11 +45,7 @@ export const KalcoMarker: FC<KalcoMarkerLastnosti> = ({
             setSearchParams({});
           },
         }}
-        ref={(m) => {
-          if (m !== null) {
-            addMarkerRef(kalco.id, m);
-          }
-        }}
+        ref={markerRef}
       >
         <Popup>
           <div className="kalco-povzetek">
