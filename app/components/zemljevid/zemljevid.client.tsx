@@ -47,7 +47,6 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
   const addMarkerRef = (kalcoId: string, markerRef: Leaflet.Marker) => {
     markerRefs.current[kalcoId] = markerRef;
   };
-  console.log('kaj se dogaja', mapRef.current?.getBounds());
 
   return (
     <>
