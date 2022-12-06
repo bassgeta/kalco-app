@@ -26,18 +26,27 @@ interface ZemljevidLastnosti {
 
 export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
   const mapRef = useRef<Leaflet.Map>(null);
+  const markerRefs = useRef<Record<string, Leaflet.Marker>>({});
 
   const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const aktivenKalco = kalcoti.find(
-      (k) => k.id === searchParams.get('kalco'),
-    );
+    const aktivenKalco = searchParams.get('kalco');
 
-    if (aktivenKalco) {
-      mapRef.current?.flyTo([aktivenKalco.lat, aktivenKalco.lng]);
+    if (aktivenKalco !== null) {
+      const markerToOpen: Leaflet.Marker = markerRefs.current[aktivenKalco];
+      if (markerToOpen) {
+        markerToOpen.openPopup();
+        mapRef.current?.flyTo(markerToOpen.getLatLng());
+      }
+    } else {
+      mapRef.current?.closePopup();
     }
-  }, [kalcoti, searchParams]);
+  }, [searchParams]);
+
+  const addMarkerRef = (kalcoId: string, markerRef: Leaflet.Marker) => {
+    markerRefs.current[kalcoId] = markerRef;
+  };
 
   return (
     <>
@@ -54,7 +63,11 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {kalcoti.map((kalco) => (
-          <KalcoMarker key={kalco.id} kalco={kalco} />
+          <KalcoMarker
+            key={kalco.id}
+            addMarkerRef={addMarkerRef}
+            kalco={kalco}
+          />
         ))}
       </MapContainer>
     </>
