@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import styles from './ocena.css';
-import { LinksFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: styles }];

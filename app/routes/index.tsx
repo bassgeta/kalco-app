@@ -9,13 +9,21 @@ import { dwabiKalcote } from '../helpers/kalco/parseKalcoti';
 import { Zemljevid } from '~/components/zemljevid/zemljevid.client';
 import styles from '../styles/index.css';
 import { ClientOnly } from 'remix-utils';
+import {
+  SeznamMapaGumb,
+  links as seznamMapaLinks,
+} from '~/components/seznam-mapa-gumb/seznam-mapa-gumb';
 
 export function loader() {
   return dwabiKalcote();
 }
 
 export const links: LinksFunction = () => {
-  return [...kalcoSeznamLinks(), { rel: 'stylesheet', href: styles }];
+  return [
+    { rel: 'stylesheet', href: styles },
+    ...kalcoSeznamLinks(),
+    ...seznamMapaLinks(),
+  ];
 };
 
 export default function Index() {
@@ -27,6 +35,7 @@ export default function Index() {
       <div className="map">
         <ClientOnly>{() => <Zemljevid kalcoti={kalcoti} />}</ClientOnly>
       </div>
+      <SeznamMapaGumb />
     </div>
   );
 }
