@@ -60,6 +60,12 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
         style={{ height: '100%', width: '100%' }}
         ref={(ref) => {
           if (ref !== null) {
+            ref.setMaxBounds(
+              Leaflet.latLngBounds(
+                Leaflet.latLng(44.912265631677194, 10.972502324763683),
+                Leaflet.latLng(47.12054759416494, 17.852753802963736),
+              ),
+            );
             mapRef.current = ref;
           }
         }}
