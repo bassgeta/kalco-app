@@ -25,7 +25,7 @@ interface ZemljevidLastnosti {
 }
 
 export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
-  const mapRef = useRef<Leaflet.Map>(null);
+  const mapRef = useRef<Leaflet.Map | null>(null);
   const markerRefs = useRef<Record<string, Leaflet.Marker>>({});
 
   const [searchParams] = useSearchParams();
@@ -47,16 +47,22 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
   const addMarkerRef = (kalcoId: string, markerRef: Leaflet.Marker) => {
     markerRefs.current[kalcoId] = markerRef;
   };
+  console.log('kaj se dogaja', mapRef.current?.getBounds());
 
   return (
     <>
       <link rel="stylesheet" href={styles} />
       <MapContainer
         center={LJUBLJANA_CENTER}
+        minZoom={9}
         zoom={13}
         scrollWheelZoom={true}
         style={{ height: '100%', width: '100%' }}
-        ref={mapRef}
+        ref={(ref) => {
+          if (ref !== null) {
+            mapRef.current = ref;
+          }
+        }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
