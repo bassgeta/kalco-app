@@ -16,6 +16,8 @@ import zorica from '~/data/kalcoti/zorica.json';
 import panda from '~/data/kalcoti/panda-bar.json';
 import sombrero from '~/data/kalcoti/sombrero-bar.json';
 import klub300 from '~/data/kalcoti/klub-300.json';
+import kaval from '~/data/kalcoti/biljardnica-kaval.json';
+import spider from '~/data/kalcoti/bowling-spider.json';
 
 const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
   return Number(
@@ -44,6 +46,8 @@ export function dwabiKalcote(): Kalco[] {
     panda,
     sombrero,
     klub300,
+    kaval,
+    spider,
   ].map((entry) => ({
     id: entry.id,
     bar: entry.bar,

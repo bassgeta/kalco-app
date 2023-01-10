@@ -1,0 +1,14 @@
+{
+  "id": "biljardnica-kaval",
+  "bar": "Biljardnica Kaval",
+  "linkDoSlike": "",
+  "dzabe": {
+    "je": false,
+    "confirmed": true
+  },
+  "zihr": true,
+  "zemljevidPovezava": "https://goo.gl/maps/1TjefN648pR8Yspw7",
+  "lat": 46.1082028,
+  "lng": 14.4612903,
+  "recenzije": []
+}
