@@ -14,7 +14,7 @@ import {
   links as seznamMapaLinks,
 } from '~/components/seznam-mapa-gumb/seznam-mapa-gumb';
 
-export function loader() {
+export async function loader() {
   return dwabiKalcote();
 }
 
