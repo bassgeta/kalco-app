@@ -12,7 +12,6 @@ const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
 };
 
 export async function dwabiKalcote(): Promise<Kalco[]> {
-  console.log(`ma kaj ${__dirname}`);
   const kalcotiDir = await fs.promises.readdir(
     `${__dirname}/../app/data/kalcoti`,
   );

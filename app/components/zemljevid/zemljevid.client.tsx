@@ -7,16 +7,12 @@ import styles from 'leaflet/dist/leaflet.css';
 import type { Kalco } from '~/interfaces/kalco';
 import { KalcoMarker } from '../kalco-marker/kalco-marker.client';
 import { useSearchParams } from '@remix-run/react';
+import { NahajalisceMarker } from '../nahajalisce-marker/nahajalisce-marker.client';
+import { NajdiMe } from '../najdi-me/najdi-me';
 
 Leaflet.Icon.Default.imagePath = '../node_modules/leaflet';
 
 delete Leaflet.Icon.Default.prototype._getIconUrl;
-
-Leaflet.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://i.imgur.com/UxAiBHa.png',
-  iconUrl: 'https://i.imgur.com/UxAiBHa.png',
-  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-});
 
 const LJUBLJANA_CENTER: LatLngTuple = [46.0542, 14.52];
 
@@ -73,6 +69,8 @@ export const Zemljevid: FC<ZemljevidLastnosti> = ({ kalcoti }) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <NajdiMe />
+        <NahajalisceMarker />
         {kalcoti.map((kalco) => (
           <KalcoMarker
             key={kalco.id}

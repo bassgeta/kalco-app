@@ -5,6 +5,13 @@ import { Ocena } from '../ocena/ocena';
 import styles from './kalco-marker.css';
 import type { Marker as LMarker } from 'leaflet';
 import { useSearchParams } from '@remix-run/react';
+import Leaflet from 'leaflet';
+
+const markerIcon = new Leaflet.Icon.Default({
+  iconRetinaUrl: 'https://i.imgur.com/UxAiBHa.png',
+  iconUrl: 'https://i.imgur.com/UxAiBHa.png',
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+});
 
 interface KalcoMarkerLastnosti {
   kalco: Kalco;
@@ -21,6 +28,7 @@ export const KalcoMarker: FC<KalcoMarkerLastnosti> = ({
     <>
       <link rel="stylesheet" href={styles} />
       <Marker
+        icon={markerIcon}
         position={[kalco.lat, kalco.lng]}
         eventHandlers={{
           popupopen: () => {
