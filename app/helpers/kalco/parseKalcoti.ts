@@ -13,6 +13,9 @@ import pivnicaUnion from '~/data/kalcoti/pivnica-union.json';
 import sharkBar from '~/data/kalcoti/shark-bar.json';
 import sportnaHisa from '~/data/kalcoti/sportna-hisa.json';
 import zorica from '~/data/kalcoti/zorica.json';
+import panda from '~/data/kalcoti/panda-bar.json';
+import sombrero from '~/data/kalcoti/sombrero-bar.json';
+import klub300 from '~/data/kalcoti/klub-300.json';
 
 const dwabiKalcoOceno = (recenzije: KalcoRecenzija[]): number => {
   return Number(
@@ -38,6 +41,9 @@ export function dwabiKalcote(): Kalco[] {
     sharkBar,
     sportnaHisa,
     zorica,
+    panda,
+    sombrero,
+    klub300,
   ].map((entry) => ({
     id: entry.id,
     bar: entry.bar,
