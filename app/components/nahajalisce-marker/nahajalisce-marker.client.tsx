@@ -1,6 +1,6 @@
 import type { LatLng } from 'leaflet';
 import Leaflet from 'leaflet';
-import { Marker, Popup, useMapEvents } from 'react-leaflet';
+import { Marker, useMapEvents } from 'react-leaflet';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -19,6 +19,7 @@ export const NahajalisceMarker: FC = () => {
   const map = useMapEvents({
     locationfound(e) {
       setPosition(e.latlng);
+      map.flyTo(e.latlng, map.getZoom());
     },
   });
 

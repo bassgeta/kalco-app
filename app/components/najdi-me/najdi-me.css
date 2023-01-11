@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 1501; /* the map is 1500 lol */
 
+  color: var(--color-primary);
   background-color: var(--color-background);
   padding: .5rem;
   top: 20px;
